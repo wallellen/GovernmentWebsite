@@ -44,8 +44,10 @@
 		<property name="mappings">
 			<props>
 				<prop key="main.htm">mainController</prop>
+				<prop key="login.htm">userController</prop>
 			</props>
 		</property>
 	</bean>
 	<bean id="mainController" class="com.gws.zy.controller.MainController"></bean>
+	<bean id="userController" class="com.gws.zy.controller.UserController"></bean>
 </beans>

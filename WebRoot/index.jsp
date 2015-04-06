@@ -16,7 +16,8 @@
 <script type="text/javascript" src="${path}/js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript"
 	src="${path}/js/bootstrap/js/bootstrap.min.js"></script>
-</head>
+<script type="text/javascript" src="${path}/js/index.js"></script>
+
 <style>
 .dropdown-submenu {
 	position: relative;
@@ -66,6 +67,7 @@
 	border-radius: 6px 0 6px 6px;
 }
 </style>
+</head>
 <body>
 	<nav class="navbar navbar-default">
 	<div class="container">
@@ -133,18 +135,14 @@
 						<li><a href="#">土地统计</a></li>
 					</ul></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-expanded="false">注册登录
-						<span class="caret"></span>
-				</a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">网站管理员</a></li>
-						<li><a href="#">村工作人员</a></li>
-						<li><a href="#">村民</a></li>
-					</ul></li>
-			</ul>
+			<div class="nav navbar-nav navbar-right">
+				<div class="btn-group btn-group-sm" role="group" aria-label="..."
+					style="padding-top:10px;">
+					<button id="login" type="button" onclick="login()"
+						class="btn btn-primary">登录</button>
+					<button id="regist" type="button" class="btn btn-default">注册</button>
+				</div>
+			</div>
 		</div>
 		<!-- /.navbar-collapse -->
 	</div>
