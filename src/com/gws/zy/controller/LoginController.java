@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class MainController {
-	@RequestMapping("/main/index")
+public class LoginController {
+	@RequestMapping("/login/index")
 	public String index() {
-		return "main/index";
+		return "login/index";
 	}
 }

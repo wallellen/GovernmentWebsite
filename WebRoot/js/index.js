@@ -3,5 +3,5 @@ $(function() {
 });
 
 var login = function() {
-	location.href="login.htm";
+	location.href="login/index.htm";
 };
