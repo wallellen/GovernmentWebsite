@@ -13,6 +13,8 @@
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <link rel="stylesheet" type="text/css"
 	href="${path}/js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css"
+	href="${path}/js/bootstrap/css/bootstrap-theme.min.css">
 <script type="text/javascript" src="${path}/js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript"
 	src="${path}/js/bootstrap/js/bootstrap.min.js"></script>
@@ -136,11 +138,10 @@
 					</ul></li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">
-				<div class="btn-group btn-group-sm" role="group" aria-label="..."
-					style="padding-top:10px;">
+				<div style="padding-top:10px;">
 					<button id="login" type="button" onclick="login()"
-						class="btn btn-primary">登录</button>
-					<button id="regist" type="button" class="btn btn-default">注册</button>
+						class="btn btn-sm btn-success">登录</button>
+					<button id="regist" type="button" class="btn btn-sm btn-default">注册</button>
 				</div>
 			</div>
 		</div>
