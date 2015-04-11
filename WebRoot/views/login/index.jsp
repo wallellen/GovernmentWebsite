@@ -49,19 +49,19 @@ body {
 				<h3 class="panel-title">登 录</h3>
 			</div>
 			<div class="panel-body">
-				<form>
+				<form action="login.htm" method="post">
 					<div class="form-group">
-						<label for="exampleInputEmail1">用户名</label> <input
-							type="email" class="form-control input-sm" id="exampleInputEmail1"
+						<label for="exampleInputEmail1">用户名</label> <input type="text"
+							class="form-control input-sm" id="name" name="name"
 							placeholder="请输入用户名">
 					</div>
-					
+
 					<div class="form-group">
 						<label for="exampleInputPassword1">密码</label> <input
-							type="password" class="form-control input-sm" id="exampleInputPassword1"
-							placeholder="请输入密码">
+							type="password" class="form-control input-sm"
+							id="password" name="password" placeholder="请输入密码">
 					</div>
-					
+
 					<button type="submit" class="btn btn-default">登录</button>
 				</form>
 			</div>

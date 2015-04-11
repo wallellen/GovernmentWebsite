@@ -6,6 +6,8 @@ public class UserInfo {
 	private String id;
 
 	private String name;
+	
+	private String password;
 
 	private int type;
 
@@ -51,5 +53,13 @@ public class UserInfo {
 
 	public void setUpdatedt(Timestamp updatedt) {
 		this.updatedt = updatedt;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
