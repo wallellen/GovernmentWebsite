@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
@@ -13,11 +11,14 @@
         http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
         http://www.springframework.org/schema/aop 
-		http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+		http://www.springframework.org/schema/aop/spring-aop-3.1.xsd 
+		http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
 	<!-- 实现bean的自动载入 -->
 	<context:component-scan base-package="com.gws.zy.controller" />
-
+	<!-- 里面有Json支持 -->
+	<mvc:annotation-driven />
 	<!-- 配置数据源 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -31,13 +32,13 @@
 		<property name="password" value="a5f3f3d3ac">
 		</property>
 	</bean>
-	
+
 	<!-- 配置TransactionManager -->
 	<bean id="txManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
+
 	<!-- 配置事务策略 -->
 	<tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
@@ -72,14 +73,20 @@
 			<value>messages</value>
 		</property>
 	</bean>
-
+	<!--添加dao和service和Controller bean-->
 	<bean id="userInfoDAO" class="com.gws.zy.dao.jdbc.UserInfoDAO">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
+
 	<bean id="userInfoService" class="com.gws.zy.service.spring.UserInfoSpringImpl">
 		<property name="userInfoDAO">
 			<ref local="userInfoDAO"></ref>
+		</property>
+	</bean>	
+	
+	<bean id="loginController" class="com.gws.zy.controller.LoginController" scope="prototype">
+		<property name="userInfoService">
+			<ref local="userInfoService"></ref>
 		</property>
 	</bean>
 </beans>

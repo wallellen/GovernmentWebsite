@@ -40,8 +40,8 @@ public class UserInfoDAO extends JdbcDaoSupport implements IUserInfoDAO {
 							throws SQLException {
 						UserInfo user = new UserInfo();
 						user.setId(rs.getString("id"));
-						user.setId(rs.getString("name"));
-						user.setId(rs.getString("type"));
+						user.setName(rs.getString("name"));
+						user.setType(rs.getInt("type"));
 						return user;
 					}
 				});
