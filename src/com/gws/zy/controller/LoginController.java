@@ -32,6 +32,7 @@ public class LoginController {
 				user.getPassword());
 
 		if (userInfo != null) {
+			//保存session
 			httpSession.setAttribute("user", userInfo);
 			return new ModelAndView("/main/index");
 		} else {
