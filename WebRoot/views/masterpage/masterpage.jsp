@@ -98,7 +98,7 @@
 					<ul class="dropdown-menu">
 						<li class="dropdown-submenu"><a tabindex="-1" href="#">党风廉政信息</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">意见箱</a></li>
+								<li><a href="/GovernmentWebsite/suggestionBox/index.htm">意见箱</a></li>
 								<li><a href="#">反腐举报</a></li>
 							</ul></li>
 						<li><a href="#">通知公告</a></li>

@@ -3,5 +3,5 @@ $(function() {
 });
 
 var login = function() {
-	location.href="login/index.htm";
+	location.href="/GovernmentWebsite/login/index.htm";
 };

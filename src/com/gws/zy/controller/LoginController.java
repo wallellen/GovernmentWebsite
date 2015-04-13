@@ -34,7 +34,7 @@ public class LoginController {
 		if (userInfo != null) {
 			//保存session
 			httpSession.setAttribute("user", userInfo);
-			return new ModelAndView("/main/index");
+			return new ModelAndView("redirect:/main/index.htm");
 		} else {
 			return new ModelAndView("/login/index");
 		}

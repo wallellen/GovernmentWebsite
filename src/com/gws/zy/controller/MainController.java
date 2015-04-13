@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MainController {
 	
-	@RequestMapping("/")
+	@RequestMapping("/main/index")
 	public ModelAndView index() {
 		return new ModelAndView("/main/index");
 	}
