@@ -69,16 +69,22 @@
 	-moz-border-radius: 6px 0 6px 6px;
 	border-radius: 6px 0 6px 6px;
 }
-.myclearfix{
-	text-align:center;
+
+.myclearfix {
+	text-align: center;
+}
+
+#head {
+	height: 209px;
+	background: url("${path}/images/main.png") no-repeat center;
 }
 </style>
 <sitemesh:write property="head" />
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<div class="container"><img width="1140px" src="${path}/images/main.png"/></div>
 	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
+		<nav class="navbar navbar-default"> <!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
 				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -150,9 +156,10 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.navbar-collapse -->
+		<!-- /.navbar-collapse --> </nav>
 	</div>
-	<!-- /.container-fluid --> </nav>
+	<!-- /.container-fluid -->
+	</nav>
 	<sitemesh:write property="body" />
 	<footer>
 	<div class="myclearfix">
